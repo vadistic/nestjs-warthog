@@ -8,9 +8,6 @@ import { ArgsType, Field, Float, InputType, Int } from 'type-graphql'
 import { registerEnumType } from 'type-graphql'
 import { PaginationArgs } from 'nestjs-warthog'
 
-import { Photo } from '../fixture/photo.entity'
-import Post from '../fixture/post.entity'
-
 export enum PostOrderByEnum {
   title_ASC = 'title_ASC',
   title_DESC = 'title_DESC',

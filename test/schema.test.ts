@@ -2,8 +2,6 @@ import { ConnectionOptions, createConnection, Connection, EntityMetadata } from 
 
 import { generate } from '../src/generator/generate'
 import { WarthogModuleOptions } from '../src/options'
-import { resolveImports } from '../src/generator/resolve-imports'
-
 import { typeOrmOptions } from './fixture/connection'
 import { Photo } from './fixture/photo.entity'
 import Post from './fixture/post.entity'
@@ -50,15 +48,6 @@ describe('schema', () => {
     const schema = await generate(ctn.entityMetadatas, options)
 
     expect(schema).toMatchSnapshot()
-  })
-
-  it('generate imports from entities glob', async () => {
-    const res = await resolveImports(options)
-
-    expect(res.join('\n')).toMatchInlineSnapshot(`
-      "import { Photo } from '../fixture/photo.entity'
-      import Post from '../fixture/post.entity'"
-    `)
   })
 
   it('generates OrderBy enum', () => {
