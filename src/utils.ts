@@ -29,5 +29,5 @@ export const niceString = (input: TemplateStringsArray, ...values: any[]) => {
   return result
 }
 
-export const indent = (input: string, level: number = 1) =>
+export const indent = (input: string, level = 1) =>
   input.replace(/^/gm, '  '.repeat(level)).trimEnd()

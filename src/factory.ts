@@ -19,13 +19,16 @@ const writeFileP = promisify(writeFile)
 export class WarthogDefinitionsFactory {
   constructor(readonly connection: Connection) {}
 
-  async generate(opts?: WarthogModuleOptions) {
-    const options = { ...defaultOptions, ...opts, connection: this.connection }
+  async generate(options?: WarthogModuleOptions) {
+    const opts = { ...defaultOptions, ...options, connection: this.connection }
 
-    await mkdirP(path.dirname(options.path))
+    const definitions = await generate(this.connection.entityMetadatas, opts)
 
-    const definitions = await generate(this.connection.entityMetadatas, options)
+    if (!opts.disabled) {
+      await mkdirP(path.dirname(opts.path))
+      await writeFileP(opts.path, definitions)
+    }
 
-    await writeFileP(options.path, definitions)
+    return definitions
   }
 }

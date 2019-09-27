@@ -8,17 +8,9 @@ export interface WarthogModuleOptions {
    */
   connection?: Connection | ConnectionOptions | string
   /**
-   * Entities glob. Needed to resolve entities import paths.
-   */
-  entities: string
-  /**
    * Place for generated file. (Also needed to resolve paths for API use)
    */
   path: string
-  /**
-   * Generate base service classes
-   */
-  shouldGenerateServices?: boolean
   /**
    * Should prettier be used on generated files?
    */
@@ -30,10 +22,8 @@ export interface WarthogModuleOptions {
 }
 
 export const defaultOptions: WarthogModuleOptions = {
-  entities: '**/*.entity.ts',
   path: './generated/warthog.ts',
   shouldSkipPrettier: false,
-  shouldGenerateServices: true,
   disabled: undefined,
 }
 

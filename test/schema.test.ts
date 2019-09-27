@@ -18,12 +18,10 @@ import {
 import { entityToWhereUniqueInput, entityToWhereInput } from '../src/generator/entity-to-inputs'
 import { entityToOrderByEnum } from '../src/generator/entity-to-enum'
 
-const options: WarthogModuleOptions = {
-  entities: 'test/fixture/**/*.entity.ts',
-  path: 'test/generated/warthog.ts',
-  shouldGenerateServices: true,
+export const options: WarthogModuleOptions = {
+  path: './generated/warthog.ts',
   shouldSkipPrettier: false,
-  disabled: false,
+  disabled: undefined,
 }
 
 describe('schema', () => {

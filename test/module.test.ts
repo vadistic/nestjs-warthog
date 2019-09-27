@@ -1,7 +1,6 @@
 import { Test, TestingModule } from '@nestjs/testing'
 import { TypeOrmModule } from '@nestjs/typeorm'
 import { Module } from '@nestjs/common'
-import path from 'path'
 
 import { typeOrmOptions } from './fixture/connection'
 import { Photo } from './fixture/photo.entity'
@@ -10,12 +9,10 @@ import { WarthogModuleOptions } from '../src/options'
 import Post from './fixture/post.entity'
 import { PostModule } from './fixture/post.module'
 
-const options: WarthogModuleOptions = {
-  entities: 'test/fixture/**/*.entity.ts',
-  path: path.join(process.cwd(), 'test/generated/warthog.ts'),
-  shouldGenerateServices: true,
+export const options: WarthogModuleOptions = {
+  path: './generated/warthog.ts',
   shouldSkipPrettier: false,
-  disabled: false,
+  disabled: undefined,
 }
 
 @Module({
