@@ -6,7 +6,7 @@ import { promisify } from 'util'
 import { writeFile } from 'fs'
 import path from 'path'
 
-import { WARTHOG_OPTIONS } from './wathog.constants'
+import { WARTHOG_OPTIONS } from './warthog.constants'
 import { WarthogModuleOptions } from '../options'
 import { generate } from '../generator/generate'
 

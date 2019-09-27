@@ -99,7 +99,7 @@ describe('schema', () => {
         id_eq?: string
         @Field(() => [String], { nullable: true })
         id_in?: string[]
-        
+
         @Field({ nullable: true })
         createdAt_gt?: Date
         @Field({ nullable: true })
@@ -108,7 +108,7 @@ describe('schema', () => {
         createdAt_lt?: Date
         @Field({ nullable: true })
         createdAt_lte?: Date
-        
+
         @Field({ nullable: true })
         updatedAt_gt?: Date
         @Field({ nullable: true })
@@ -117,7 +117,7 @@ describe('schema', () => {
         updatedAt_lt?: Date
         @Field({ nullable: true })
         updatedAt_lte?: Date
-        
+
         @Field({ nullable: true })
         name_eq?: string
         @Field({ nullable: true })
@@ -130,7 +130,7 @@ describe('schema', () => {
         name_endsWith?: string
         @Field(() => [String], { nullable: true })
         name_in?: string[]
-        
+
         @Field({ nullable: true })
         description_eq?: string
         @Field({ nullable: true })
@@ -143,7 +143,7 @@ describe('schema', () => {
         description_endsWith?: string
         @Field(() => [String], { nullable: true })
         description_in?: string[]
-        
+
         @Field({ nullable: true })
         filename_eq?: string
         @Field({ nullable: true })
@@ -156,7 +156,7 @@ describe('schema', () => {
         filename_endsWith?: string
         @Field(() => [String], { nullable: true })
         filename_in?: string[]
-        
+
         @Field({ nullable: true })
         views_eq?: number
         @Field({ nullable: true })
@@ -169,12 +169,12 @@ describe('schema', () => {
         views_lte?: number
         @Field(() => [Int], { nullable: true })
         views_in?: number[]
-        
+
         @Field(() => Boolean, { nullable: true })
         isPublished_eq?: Boolean
         @Field(() => [Boolean], { nullable: true })
         isPublished_in?: Boolean[]
-        
+
         @Field({ nullable: true })
         post_eq?: string
         @Field({ nullable: true })

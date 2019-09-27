@@ -8,8 +8,9 @@ Proof of concept. I wanted to generate crud input/arguments for various scalar f
 
 Props:
 
-- Works and passes tests
+- Works as expected and passes tests
 - Offers warthog functionality I wanted form warthog
+- No extra deps except those from `nestjs`/ `type-graphql`/ `typeorm`
 
 Cons:
 

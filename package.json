@@ -1,10 +1,10 @@
 {
-  "name": "rewarp-server",
+  "name": "nestjs-warthog",
   "version": "0.1.0",
-  "description": "Time tracking app",
+  "description": "NestJS module to generate (scalar) type-graphql inputs from typeORM entities. Based on warthog.dev",
   "author": "Jakub Wadas <vadistic@gmail.com>",
-  "license": "No License",
-  "private": true,
+  "license": "MIT",
+  "private": false,
   "scripts": {
     "build": "rm -rf dist && tsc -p tsconfig.build.json",
     "format": "prettier --write \"src/**/*.ts\"",
@@ -12,9 +12,13 @@
     "test": "jest",
     "test:watch": "jest --watch",
     "test:cov": "jest --coverage",
-    "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand"
+    "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
+    "prepare": "install-peers"
   },
   "dependencies": {
+    "mkdirp": "^0.5.1"
+  },
+  "peerDependencies": {
     "@nestjs/common": "^6.0.0",
     "@nestjs/core": "^6.0.0",
     "@nestjs/graphql": "^6.5.1",
@@ -22,7 +26,6 @@
     "class-transformer": "^0.2.3",
     "class-validator": "^0.10.1",
     "graphql": "^14.5.8",
-    "mkdirp": "^0.5.1",
     "reflect-metadata": "^0.1.13",
     "rxjs": "^6.5.3",
     "type-graphql": "^0.17.5",
@@ -42,6 +45,7 @@
     "eslint": "^6.4.0",
     "eslint-config-prettier": "^6.3.0",
     "faker": "^4.1.0",
+    "install-peers-cli": "^2.1.1",
     "jest": "24.9.0",
     "pg": "^7.12.1",
     "prettier": "1.18.2",

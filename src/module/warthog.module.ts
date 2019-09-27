@@ -1,7 +1,7 @@
 import { Module, DynamicModule } from '@nestjs/common'
 
 import { WarthogService } from './warthog.service'
-import { WARTHOG_OPTIONS } from './wathog.constants'
+import { WARTHOG_OPTIONS } from './warthog.constants'
 import { WarthogModuleOptions, defaultOptions } from '../options'
 
 @Module({
