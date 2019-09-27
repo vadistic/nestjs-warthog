@@ -8,14 +8,14 @@ Proof of concept. I wanted to generate crud input/arguments for various scalar f
 
 Props:
 
-- Works as expected and passes tests
-- Offers warthog functionality I wanted form warthog
+- Works (and pass tests)
+- Offers functionality I wanted to extract form warthog
 - No extra deps except those from `nestjs`/ `type-graphql`/ `typeorm`
 
 Cons:
 
-- Does not support relations - only scalar fields (it's doable with doubled/tripled complexity but the idea is to expose public API and controlling cascaded operations seems really infeasible )
-- Inputs are based on entity not a public model (problem with e.g. sort users by password field)
+- Does not support relations - only scalar fields (it's doable with doubled complexity, but the main idea is to expose generated inputs as public API and controlling nested operations seems really infeasible)
+- Inputs are based on entity not a public model (problem with e.g. sorting users by password)
 
 ## Usage
 
